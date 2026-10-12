@@ -155,3 +155,41 @@ body.light .live-profile-card{background:linear-gradient(180deg,#ffffff,#f4f8ff)
   .footer-inner{flex-direction:column}
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.btn,.nav-links a{transition:none}}
+
+/* Real SVG social platform icons */
+.social-btn svg{display:block;width:22px;height:22px;flex-shrink:0}
+.social-disabled{cursor:default;opacity:.85}
+a.social-btn{transition:transform .2s ease,filter .2s ease}
+a.social-btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
+.social-btn:focus-visible{outline:3px solid #7acaff;outline-offset:4px}
+
+
+/* Vercel update: properly sized, centered social icons */
+.social-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+.social-row .social-btn {
+  width: 48px; height: 48px; min-width: 48px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0; line-height: 0; box-sizing: border-box;
+  flex-shrink: 0; border-radius: 50%; color: #fff;
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 8px 18px rgba(0,0,0,.2);
+  transition: transform .3s ease;
+}
+.social-row .social-btn svg {
+  width: 22px !important; height: 22px !important;
+  display: block; flex-shrink: 0;
+}
+.social-row .social-btn:hover { transform: translateY(-4px); }
+
+/* Vercel update: readable working-principle notice in all themes */
+.skills-box .notice.compact-notice,
+body.light .skills-box .notice.compact-notice {
+  background: #14294f !important;
+  color: #f1f5ff !important;
+  border: 1px solid #46618e;
+  border-radius: 18px;
+  padding: 20px;
+  line-height: 1.8;
+}
+.skills-box .notice.compact-notice strong,
+body.light .skills-box .notice.compact-notice strong { color: #f5c75e !important; }
